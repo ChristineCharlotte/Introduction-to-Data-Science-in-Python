@@ -1,0 +1,1 @@
+my_function = lambda a, b, c : a + b
