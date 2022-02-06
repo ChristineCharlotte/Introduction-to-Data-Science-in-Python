@@ -84,13 +84,12 @@ b = np.array([1, 2, 3, 4])
 # print(d)
 # >> [ 10  40  90 160]
 
-# 6：30
 farenheit = np.array([0, -10, -5, -15, 0])
 
 celcius = (farenheit - 32) * (5/9)
-print(celcius)
-print(celcius > -20)
-print(celcius % 2 == 2)
+# print(celcius)
+# print(celcius > -20)
+# print(celcius % 2 == 0)
 
 # >>
 # [-17.77777778 -23.33333333 -20.55555556 -26.11111111 -17.77777778]
@@ -101,11 +100,19 @@ print(celcius % 2 == 2)
 A = np.array([[1, 1], [0, 1]])
 B = np.array([[2, 0], [3, 4]])
 
-# Elementwise product
-# print(A * B)
+# 元素对应乘积 Elementwise product
+print(A * B)
 
-# Matrix product
-# print(A @ B)
+print('\n')
+# 矩阵的乘法 Matrix product
+print(A @ B)
+
+# >>
+# [[2 0]
+#  [0 4]]
+#
+# [[5 4]
+#  [3 4]]
 
 # Upcasting
 # array1 = np.array([[1, 2, 3], [4, 5, 6]])
