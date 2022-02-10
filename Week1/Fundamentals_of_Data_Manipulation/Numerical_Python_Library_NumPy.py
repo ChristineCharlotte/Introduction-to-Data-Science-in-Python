@@ -101,11 +101,11 @@ A = np.array([[1, 1], [0, 1]])
 B = np.array([[2, 0], [3, 4]])
 
 # 元素对应乘积 Elementwise product
-print(A * B)
+# print(A * B)
 
-print('\n')
+# print('\n')
 # 矩阵的乘法 Matrix product
-print(A @ B)
+# print(A @ B)
 
 # >>
 # [[2 0]
@@ -114,12 +114,14 @@ print(A @ B)
 # [[5 4]
 #  [3 4]]
 
-# Upcasting
-# array1 = np.array([[1, 2, 3], [4, 5, 6]])
-# array2 = np.array([[7.1, 8.2, 9.3], [10.4, 11.2, 12.3]])
-# array3 = array1 + array2
+# Upcasting 上移
+array1 = np.array([[1, 2, 3], [4, 5, 6]])
+array2 = np.array([[7.1, 8.2, 9.3], [10.4, 11.2, 12.3]])
+array3 = array1 + array2
 
-# print(array1.dtype, array2.dtype, array3.dtype)
+print(array1.dtype, array2.dtype, array3.dtype)
+# >>
+# int64 float64 float64
 
 # Interesting Aggregation functions, such as sum(), max(), min(), and mean()
 # print(array3.max())
@@ -127,9 +129,13 @@ print(A @ B)
 # print(array3.sum())
 # print(array3.mean())
 
-# 10:14
 b = np.arange(1, 16, 1).reshape(3, 5)
-# print(b)
+print(b)
+
+# >>
+# [[ 1  2  3  4  5]
+# [ 6  7  8  9 10]
+# [11 12 13 14 15]]
 
 
 
