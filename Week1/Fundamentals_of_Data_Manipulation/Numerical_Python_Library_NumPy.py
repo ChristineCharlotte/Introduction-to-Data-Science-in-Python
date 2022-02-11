@@ -3,18 +3,21 @@
 
 import numpy as np
 import math
+from PIL import Image
+from IPython.display import display
+
 
 # Array Creation
 # Arrays are displayed as a list...
 
-# a = np.array([1, 2, 3])
+a = np.array([1, 2, 3])
 # print(a)
 
 # We can print the number of dimensions of a list using the ndim attribute
 # print(a.ndim)
 
 # If we pass in a list of lists in numpy array, we create a multidimensional array, for instance, a matrix
-# b = np.array([[1, 2, 3], [4, 5, 6]])
+b = np.array([[1, 2, 3], [4, 5, 6]])
 # print(b)
 
 # We can print out the length of each dimension by calling the shape attribute, which returns a tuple
@@ -24,7 +27,7 @@ import math
 # print(b.dtype)
 
 # Besides integers, floats are also accepted in numpy arrays
-# c = np.array([2.2, 5, 1.1])
+c = np.array([2.2, 5, 1.1])
 # print(c)
 # print(c.dtype)
 
@@ -33,8 +36,8 @@ import math
 
 # Numpy offers several functions to create arrays with placeholders, such as zero's or one's.
 # Let's create two arrays, both the same shape but with different filter values.
-# d = np.zeros((2, 3))
-# e = np.ones((2, 3))
+d = np.zeros((2, 3))
+e = np.ones((2, 3))
 # print(d, '\n\n', e)
 
 # >>
@@ -45,7 +48,7 @@ import math
 #  [1. 1. 1.]]
 
 # We can also generate an array with random numbers
-# random_array = np.random.rand(2, 3)
+random_array = np.random.rand(2, 3)
 # print(random_array)
 
 # >>
@@ -53,7 +56,7 @@ import math
 #  [0.68485572 0.04026548 0.92116046]]
 
 # We can also create a sequence of numbers in an array with the arange() function.
-# f = np.arange(10, 30, 2)
+f = np.arange(10, 30, 2)
 # print(f)
 
 # >>
@@ -61,7 +64,7 @@ import math
 
 # If we want to generate a sequence of floats, we can use the linspace() function.
 # In this function, the third argument is the total number of items you want to generate
-# linspace_array = np.linspace(0, 2, 5)
+linspace_array = np.linspace(0, 2, 5)
 # print(linspace_array)
 
 # >>
@@ -75,12 +78,12 @@ a = np.array([10, 20, 30, 40])
 b = np.array([1, 2, 3, 4])
 
 # a minus b
-# c = a - b
+c = a - b
 # print(c)
 # >> [ 9 18 27 36]
 
 # a times b
-# d = a * b
+d = a * b
 # print(d)
 # >> [ 10  40  90 160]
 
@@ -119,7 +122,7 @@ array1 = np.array([[1, 2, 3], [4, 5, 6]])
 array2 = np.array([[7.1, 8.2, 9.3], [10.4, 11.2, 12.3]])
 array3 = array1 + array2
 
-print(array1.dtype, array2.dtype, array3.dtype)
+# print(array1.dtype, array2.dtype, array3.dtype)
 # >>
 # int64 float64 float64
 
@@ -130,12 +133,15 @@ print(array1.dtype, array2.dtype, array3.dtype)
 # print(array3.mean())
 
 b = np.arange(1, 16, 1).reshape(3, 5)
-print(b)
+# print(b)
 
 # >>
 # [[ 1  2  3  4  5]
 # [ 6  7  8  9 10]
 # [11 12 13 14 15]]
+
+image = Image.open('python.png')
+image.show()
 
 
 
