@@ -4,7 +4,7 @@
 import numpy as np
 import math
 from PIL import Image
-from IPython.display import display
+# from IPython.display import display
 
 
 # Array Creation
@@ -140,10 +140,65 @@ b = np.arange(1, 16, 1).reshape(3, 5)
 # [ 6  7  8  9 10]
 # [11 12 13 14 15]]
 
-image = Image.open('python.png')
-image.show()
+# image = Image.open('python.png')
+# image.show()
 
+# array = np.array(image)
 
+a = np.array([1, 3, 5, 7])
+# print(a[2])
 
+# >>
+# 5
 
+# For multidimensional array, we need to use integer array indexing, let's create a  new multidimensional array
+a = np.array([
+    [1, 2],
+    [3, 4],
+    [5, 6]
+])
+# print(a, '\n')
+# print(a[1, 1])
 
+# >>
+# [[1 2]
+#  [3 4]
+#  [5 6]]
+
+# 4
+
+a = np.array([
+    [1, 2],
+    [3, 4],
+    [5, 6]
+])
+
+b = np.array([a[0, 0], a[1, 1], a[2, 1]])
+# print(b)
+
+# >> [1 4 6]
+
+a = np.array([
+    [1, 2],
+    [3, 4],
+    [5, 6]
+])
+
+c = a[
+    [0, 1, 2],
+    [0, 1, 1]
+]
+# print(c)
+
+# >> [1 4 6]
+
+a = np.array([
+    [1, 2],
+    [3, 4],
+    [5, 6]
+])
+print(a>5)
+
+# [[False False]
+#  [False False]
+#  [False  True]]
